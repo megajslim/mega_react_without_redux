@@ -49,7 +49,7 @@
 .div_con5 ul li .title_wrap {background:#f4f4f4; position:relative; padding:25px 40px 37px; height:55px; font-size:17px; letter-spacing:-1;}
 .div_con5 ul li .title_wrap .team_stu {font-size:20px; color:#151ab2; display:block;}
 .div_con5 ul li .title_wrap .team_stu em {font-size:27px; color:#010101;}
-.div_con5 ul li .title_wrap .team_sc {font-size:17px; color:#555; font-weight:normal; vertical-align:top; margin-top:10px; display:block;}
+.div_con5 ul li .title_wrap .team_sc {font-size:17px; color:s#555; font-weight:normal; vertical-align:top; margin-top:10px; display:block;}
 .div_con5 ul li .title_wrap .team_sc em {background: url('../images/campus_common/2020_team/con02_img02.png') 100% 70% no-repeat; padding-right:10px; margin-right:7px;}
 .div_con5 ul li .title_wrap .team_code {background: url('../images/campus_common/2020_team/con02_img01.png') 100% 70% no-repeat; width:66px; height:66px; color:#fff; font-weight:bold; line-height:64px; display:block; position:absolute; top:23px; right:30px; font-size:17px; text-align:center; text-indent:-2px;}
 .div_con5 ul li.c_even {
@@ -69,9 +69,6 @@
 }
 .div_con3 .con {
 	position: relative;
-}
-.div_con3 ul {
-	overflow: hidden;
 }
 .div_con3 ul li {
 	display: inline-block;
