@@ -1,0 +1,363 @@
+#div_cont .con {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+.top_wrap {
+	position: relative;
+	height: 815px;
+	overflow: hidden;
+	background: #fff url('../images/campus_common/2020_team/top_bg.jpg') center top no-repeat;
+}
+.top_wrap .con {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.top_wrap .con img {
+	position: absolute;
+	left:0;
+	opacity:0;
+}
+.top_wrap .con .act_wrap {position:absolute; top:0; width:100%;}
+.top_wrap .con img.act02 {
+	top:102px;
+	left:395px;
+}
+.top_wrap .con img.act03 {
+	top:162px;
+	left:-233px;
+}
+.top_wrap .con img.act04 {
+	top:276px;
+	left:567px;
+}
+.top_wrap .con img.act05 {
+	top:100px;
+	left:683px;
+}
+
+
+.top_wrap .con img.act06 {
+	left: -770px;
+	top: 100px;
+	opacity:1;
+}
+.top_wrap .con img.act07 {
+	left: 366px;
+	top: 343px;
+}
+.top_wrap .con img.act08 {
+	top: 327px;
+	left: 545px;
+}
+.top_wrap .con img.act09 {
+	top: 131px;
+	left: 442px;
+}
+.top_wrap .rolling_wrap {position:absolute; width:100%; top:440px;}
+.top_wrap .rolling {width:1000px; margin:0 auto; position:relative;}
+.top_wrap .rolling .title {right:430px; position:absolute; z-index:1;}
+.top_wrap .rolling .vertical {position:absolute; left:-20px; top:35px; background:url('../images/campus_common/2021_team/top_rolling_bg_1.png') 50% 0 no-repeat; width:1770px; height:340px;}
+.top_wrap .rolling .vertical .scholarship_wrap {width:1000px; padding-top:100px; margin-left:-21px;}
+.top_wrap .rolling .vertical .scholarship_wrap .bx-wrapper {width:100% !important; text-align:center;}
+.top_wrap .rolling .vertical .scholarship_wrap p {display:inline-block;}
+.top_wrap .rolling .vertical .scholarship_wrap .campus {color:#fff; font-size:20px; font-weight:bold; margin-right:25px; padding-bottom:5px;}
+.top_wrap .rolling .vertical .scholarship_banner div {display:inline-block; position:relative; overflow:hidden; width:275px; text-align:right; margin-left:100px;}
+.top_wrap .rolling .vertical .scholarship_wrap .campus .loca_inner {margin-left:13px; font-size:20px; }
+.top_wrap .rolling .vertical .scholarship_wrap .campus .location {background: url('../images/campus_common/2020_team/top_rolling_sc.png') 0 0 no-repeat; color:#000; display:inline-block; width:106px; text-align:center; font-size:20px; padding:3px 0 8px;}
+.top_wrap .rolling .vertical .scholarship_wrap .name {color:#ffd67e; font-weight:bold; font-size:80px;}
+.top_wrap .rolling .vertical .scholarship_wrap .name+div {background: url('../images/campus_common/2020_team/top_rolling_cir.png') 0 0 no-repeat; display:inline-block; position:relative; overflow:hidden; vertical-align:bottom; margin-left:25px;width:270px; text-align:left;}
+.top_wrap .rolling .vertical .scholarship_wrap .circle {width:70px; font-size:18px; line-height:22px; color:#ffd67e; font-weight:bold; padding:11px 0 15px; margin-right:10px; text-align:center;}
+.top_wrap .rolling .vertical .scholarship_wrap .school {font-size:20px; color:#fff; text-align:left; line-height:27px;}
+.div_con1 {padding:90px 0 100px;}
+.div_con1 .con {height:339px; background:url('../images/campus_common/2021_team/count_bg_1.jpg') 50% 0 no-repeat; position:relative;}
+.div_con1 .con .counter {font-size:70px; font-weight:bold; position:absolute; top:170px; color:#000;}
+.div_con1 .con .counter.posi01 {left:170px;}
+.div_con1 .con .counter.posi02 {left:616px;}
+.div_con1 .con .counter.posi03 {left:785px;}
+.div_con2 {
+	position: relative;
+	background: #f4ebd7 url('../images/campus_common/2021_team/con01_img01_1.jpg') 50% 0 no-repeat;
+	overflow: hidden;
+    padding-bottom:100px;
+}
+.div_con2 .con {margin-top:310px !important; background:#fff; position:relative;}
+.div_con2 ul {padding:50px 50px 0;}
+.div_con2 ul li {border-bottom:1px solid #ccc; padding-bottom:90px; overflow:hidden;}
+.minus_paddingb {padding-bottom:-80px }
+.div_con2 ul li.last {border-bottom:none; padding-bottom:80px;}
+.div_con2 ul li .title_wrap {position:absolute; width:230px; margin-top: 20px;}
+.div_con2 ul li .title_wrap img {position:absolute; left:-38px; top:-12px;}
+.div_con2 ul li .title {padding-left:230px;}
+.div_con2 ul li .team_contents {padding-left:268px; font-size:16px; line-height:29px; color:#333; margin-top:20px; word-break:keep-all;}
+.div_con2 ul li .team_contents span {color:#151ab2; font-weight:bold;font-size:16px; line-height:29px;}
+.div_con3 {
+	position: relative;
+	overflow: hidden;
+	padding: 90px 0 110px;
+}
+.div_con3 .con {
+	position: relative;
+}
+.div_con3 ul {
+	overflow: hidden;
+}
+.div_con3 ul li {
+	display: inline-block;
+	float: left;
+	border:1px solid #d9d9d9;
+	width:478px; height:548px;
+	margin-bottom:50px;
+	color:#555;
+	font-weight:bold;
+}
+.div_con3 ul li .title_wrap {background:#f4f4f4; position:relative; padding:25px 40px 37px; height:55px; font-size:17px; letter-spacing:-1;}
+.div_con3 ul li .title_wrap .team_stu {font-size:20px; color:#151ab2; display:block;}
+.div_con3 ul li .title_wrap .team_stu em {font-size:27px; color:#010101;}
+.div_con3 ul li .title_wrap .team_sc {font-size:17px; color:#555; font-weight:normal; vertical-align:top; margin-top:10px; display:block;}
+.div_con3 ul li .title_wrap .team_sc em {background: url('../images/campus_common/2020_team/con02_img02.png') 100% 70% no-repeat; padding-right:10px; margin-right:7px;}
+.div_con3 ul li .title_wrap .team_code {background: url('../images/campus_common/2020_team/con02_img01.png') 100% 70% no-repeat; width:66px; height:66px; color:#fff; font-weight:bold; line-height:64px; display:block; position:absolute; top:23px; right:30px; font-size:17px; text-align:center; text-indent:-2px;}
+.div_con3 ul li.c_even {
+	margin-left: 40px;
+}
+.div_con3 ul li .title {padding:25px 40px 19px; line-height:27px; font-size:17px; color:#000;}
+.div_con3 ul li .team_contents {font-weight:normal; font-size:14px; line-height:25px; color:#777; padding:0 40px;}
+.div_con3 ul li .team_contents span {color:#151ab2; font-size:14px;}
+.div_con3 .more_btn {background:#f0f0f0; height:60px; text-align:center; cursor:pointer;}
+.div_con3 .more_btn span {font-size:20px; color:#000; margin-top:16px; padding-left:25px; background: url('../images/campus_common/2020_team/con02_img03.png') 0 70% no-repeat; display:inline-block;}
+.div_con4 {
+	background:#2e31af;
+	position: relative;
+	overflow: hidden;
+	padding: 110px 0 100px;
+}
+#div_cont {
+	color: #333;
+	font-size: 13px;
+	font-family: "MalGun Gothic";
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -1.5px;
+}
+#div_cont {
+	width: 100%;
+	text-align: center;
+	clear: both;
+	position: relative;
+	overflow: hidden;
+}
+
+.div_con4 {
+	position: relative;
+	background: #f4ebd7 url('../images/campus_common/2021_team/con01_img01_1.jpg') 50% 0 no-repeat;
+	overflow: hidden;
+    padding-bottom:100px;
+}
+.div_con4 .con {margin-top:310px !important; background:#fff; position:relative;}
+.div_con4 ul {padding:0px 50px 0;}
+.div_con4 ul li {border-bottom:1px solid #ccc; padding-bottom:10px; overflow:hidden;}
+.div_con4 ul li.last {border-bottom:none; padding-bottom:80px;}
+.div_con4 ul li .title_wrap {position:absolute; width:230px; margin-top: 10px;}
+.div_con4 ul li .title_wrap img {position:absolute; left:-38px; top:-12px;}
+.div_con4 ul li span .title {padding:25px 40px 19px; line-height:27px; font-size:17px; color:#000;}
+.div_con4 ul li .team_contents {padding-left:268px; font-size:16px; line-height:29px; color:#333; margin-top:20px; word-break:keep-all;}
+.div_con4 ul li .team_contents span {color:#151ab2; font-weight:bold;font-size:16px; line-height:29px;}
+
+.div_con5 {
+	position: relative;
+	overflow: hidden;
+	padding: 90px 0 110px;
+}
+.div_con5 .con {
+	position: relative;
+}
+.div_con5 ul {
+	overflow: hidden;
+}
+.div_con5 ul li {
+	display: inline-block;
+	float: left;
+	border:1px solid #d9d9d9;
+	width:478px; height:548px;
+	margin-bottom:50px;
+	color:#555;
+	font-weight:bold;
+}
+.div_con5 ul li .title_wrap {background:#f4f4f4; position:relative; padding:25px 40px 37px; height:55px; font-size:17px; letter-spacing:-1;}
+.div_con5 ul li .title_wrap .team_stu {font-size:20px; color:#151ab2; display:block;}
+.div_con5 ul li .title_wrap .team_stu em {font-size:27px; color:#010101;}
+.div_con5 ul li .title_wrap .team_sc {font-size:17px; color:#555; font-weight:normal; vertical-align:top; margin-top:10px; display:block;}
+.div_con5 ul li .title_wrap .team_sc em {background: url('../images/campus_common/2020_team/con02_img02.png') 100% 70% no-repeat; padding-right:10px; margin-right:7px;}
+.div_con5 ul li .title_wrap .team_code {background: url('../images/campus_common/2020_team/con02_img01.png') 100% 70% no-repeat; width:66px; height:66px; color:#fff; font-weight:bold; line-height:64px; display:block; position:absolute; top:23px; right:30px; font-size:17px; text-align:center; text-indent:-2px;}
+.div_con5 ul li.c_even {
+	margin-left: 40px;
+}
+.div_con5 ul li .title {padding:25px 40px 19px; line-height:27px; font-size:17px; color:#000;}
+.div_con5 ul li .team_contents {font-weight:normal; font-size:14px; line-height:25px; color:#777; padding:0 40px;}
+.div_con5 ul li .team_contents span {color:#151ab2; font-size:14px;}
+.div_con5 .more_btn {background:#f0f0f0; height:60px; text-align:center; cursor:pointer;}
+.div_con5 .more_btn span {font-size:20px; color:#000; margin-top:16px; padding-left:25px; background: url('../images/campus_common/2020_team/con02_img03.png') 0 70% no-repeat; display:inline-block;}
+
+
+/* animation */
+.animation_element {
+	transition: all 700ms;
+	opacity: 0;
+}
+.animation_element.delay150 {
+	transition-delay: 150ms;
+}
+.animation_element.delay200 {
+	transition-delay: 200ms;
+}
+.animation_element.delay250 {
+	transition-delay: 250ms;
+}
+.animation_element.delay300 {
+	transition-delay: 300ms;
+}
+.animation_element.delay450 {
+	transition-delay: 450ms;
+}
+.animation_element.delay550 {
+	transition-delay: 550ms;
+}
+.animation_element.delay650 {
+	transition-delay: 650ms;
+}
+.animation_element.delay750 {
+	transition-delay: 750ms;
+}
+.animation_element.delay850 {
+	transition-delay: 850ms;
+}
+.animation_element.delay950 {
+	transition-delay: 950ms;
+}
+.animation_element.delay1050 {
+	transition-delay: 1050ms;
+}
+.animation_element.delay1150 {
+	transition-delay: 1150ms;
+}
+.animation_element.delay1250 {
+	transition-delay: 1250ms;
+}
+.animation_element.delay1350 {
+	transition-delay: 1350ms;
+}
+.animation_element.delay1450 {
+	transition-delay: 1450ms;
+}
+.animation_element.delay1550 {
+	transition-delay: 1550ms;
+}
+.animation_element.delay1650 {
+	transition-delay: 1650ms;
+}
+.animation_element.delay1750 {
+	transition-delay: 1750ms;
+}
+.animation_element.delay1850 {
+	transition-delay: 1850ms;
+}
+.animation_element.delay1950 {
+	transition-delay: 1950ms;
+}
+.animation_element.delay2050 {
+	transition-delay: 2050ms;
+}
+.animation_element.delay2150 {
+	transition-delay: 2150ms;
+}
+.animation_element.delay2250 {
+	transition-delay: 2250ms;
+}
+.animation_element.delay2350 {
+	transition-delay: 2350ms;
+}
+.animation_element.b_to_t {
+	transform: translate(0px, 70px);
+}
+.animation_element.l_to_r {
+	transform: translate(-100px, 0px) !important;
+}
+.animation_element.animation_set {
+	opacity: 1 !important;
+}
+.animation_element.l_to_r.animation_set {
+	transform: translate(-7px, 0px) !important;
+}
+.quick {
+	width: 100px;
+	position: fixed;
+	top: 310px;
+	left: 50%;
+	margin-left: 523px;
+	z-index: 999;
+}
+.quick img {
+	opacity: 1;
+}
+.plan div {
+	padding-left: 65px;
+}
+.fix_menu_wrap {
+	width: 100%;
+	background: #242736;
+	z-index:1;
+}
+.fix_menu_wrap ul {
+	overflow: hidden;
+	width: 960px;
+	margin: 0 auto;
+	border-left: 1px solid #50525e;
+}
+.fix_menu_wrap ul li {
+	display: table;
+	float: left;
+	width: 239px;
+	border-right: 1px solid #50525e;
+	height: 99px;
+	border-top: 3px solid #242736;
+	cursor: pointer;
+	text-align: center;
+}
+.fix_menu_wrap ul li span {
+	color: #fff;
+	font-weight: bold;
+	font-size: 26px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.fix_menu_wrap ul li.on {
+	background: #fff;
+}
+.fix_menu_wrap ul li.on span {
+	color: #000;
+}
+.fix_contents {
+	width: 960px;
+	margin: 80px auto 0;
+	overflow: hidden;
+	display: none;
+}
+.fix_contents.on {
+	display: block;
+}
+.fix_contents .box_wrap {overflow:hidden;}
+.fix_contents .box {
+	width: 450px;
+	display: inline-block;
+	float: left;
+	padding-right: 30px;
+}
+.fix_contents .box +.box {
+	width: 450px;
+	border-left: 1px solid #ccc;
+	padding-left: 29px;
+	padding-right: 0;
+}
