@@ -15,6 +15,7 @@ class teamSugiList extends Component {
     componentDidMount(){
         this.renderList();
     }
+
     renderList = () => {
         TeamSugiDataService.getAll()
         .then( response => {
@@ -23,13 +24,13 @@ class teamSugiList extends Component {
                 errcode: responseJson.errCode,
                 errmsg: responseJson.errMsg,
             })
-            console.log(responseJson.errCode);
+            console.log(responseJson);
             if (hasError.error) {
                 alert("서버에서 오류가 발생되었습니다.");
             } else {
                 const jsonResult =  responseJson.sugiList.reverse().map((sugiItem, index) => {
                    
-                    const code_name = sugiItem.s_CODENAME;
+                    const s_code_name = sugiItem.s_CODENAME;
                     const s_name = sugiItem.s_NAME;
                     const s_univ = sugiItem.s_UNIV;
                     const s_dept_type = sugiItem.s_DEPT_TYPE;
@@ -38,12 +39,12 @@ class teamSugiList extends Component {
                     const s_content = sugiItem.s_CONTENT;
                     const s_seq = sugiItem.seq;
                     const s_subject = sugiItem.s_SUBJECT
-                    const classType =  index % 2 === 0  ? 'c' : 'c_even';
+                    const classType =  index % 2 === 0  ? 'c_odd' : 'c_even';
 
                     console.log(index % 2);
 
                     return { 
-                        code_name : code_name, 
+                        s_code_name : s_code_name, 
                         s_name : s_name, 
                         s_univ : s_univ, 
                         s_dept_type : s_dept_type, 
@@ -68,19 +69,19 @@ class teamSugiList extends Component {
     render() { 
         const { sugiList } = this.state;
         return (  
-            <div className = "container"> 
+            <div id = "container" style ={{paddingBottom:'0px !important'}}> 
                 <div id="div_cont" >
                     <div id="div_full" className="div_con taL">
-                        <div className="div_con5">
+                        <div className="div_con3">
                             <div className="con">
                             {
                                 sugiList.map((item, index) => (
-                                <ul className="list_wrap" id="listPage">
-                                    <li id="liNm" className={item.classType}>
+                                <ul className="list_wrap" id="listPage" key={index}>
+                                    <li id={item.seq} className={item.classType}>
                                         <div className="title_wrap">
                                             <span className="team_stu"><em style={{fontStyle:"normal"}}>{item.s_name}</em> {item.s_univ} {item.s_major}</span>
-                                            <span className="team_sc"><em style={{fontStyle:"normal"}}>노량진</em> 인문계열 {item.classType}</span>
-                                            <span className="team_code">정시</span>
+                                            <span className="team_sc"><em style={{fontStyle:"normal"}}>{item.s_code_name}</em> {item.s_dept_type}</span>
+                                            <span className="team_code">{item.s_type}</span>
                                         </div>
                                         <p className="title">{item.s_subject}</p>
                                         <p className="team_contents">{item.s_content}</p>

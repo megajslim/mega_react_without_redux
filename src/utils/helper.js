@@ -1,9 +1,5 @@
 import { isEmpty, isEqual } from 'lodash/lang'
 
-export const urlPublicImage = (folder, name) => {
-    return `/images/campus_common/${folder}/${name}`
-}
-
 //요청한 API 결과에 오류를 가지고 있는지
 export const hasApiServiceError = result => {
     if (isEmpty(result)) {
