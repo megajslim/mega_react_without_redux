@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import TeamSugiDataService from "../services/teamSugiService";
 import { isUndefined, isEqual } from 'lodash/lang'
-import {hasApiServiceError} from '../utils/helper'
+import {hasApiServiceError, urlPublicImage} from '../utils/helper'
 
 class teamSugiList extends Component {
     constructor(props) {
@@ -70,8 +70,10 @@ class teamSugiList extends Component {
         const { sugiList } = this.state;
         return (  
             <div id = "container" style ={{paddingBottom:'0px !important'}}> 
+               
                 <div id="div_cont" >
                     <div id="div_full" className="div_con taL">
+                    <div><img src = {urlPublicImage('2020_team','sugi_list_topn_2.jpg')} style={{width:'1000px'}}/></div>
                         <div className="div_con3">
                             <div className="con">
                             {
