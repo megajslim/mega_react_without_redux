@@ -6,15 +6,29 @@ import {hasApiServiceError, urlPublicImage} from '../utils/helper'
 class teamSugiList extends Component {
     constructor(props) {
         super(props);
-       //this.renderList = this.renderList.bind(this);
+        this.showMore = this.showMore.bind(this);
         this.state = {  
             sugiList : [],
-            isMod : false,
+            countItem : 2,
+            moreMode : true
         }
     }
     componentDidMount(){
         this.renderList();
     }
+
+    showMore() {
+        const {sugiList, countItem } = this.state
+        sugiList.length  === countItem ? (
+            this.setState({ 
+                moreMode : false
+            })
+        ) : (
+            this.setState({ 
+                countItem: countItem + 2
+            })
+        )
+      }
 
     renderList = () => {
         TeamSugiDataService.getAll()
@@ -40,9 +54,6 @@ class teamSugiList extends Component {
                     const s_seq = sugiItem.seq;
                     const s_subject = sugiItem.s_SUBJECT
                     const classType =  index % 2 === 0  ? 'c_odd' : 'c_even';
-
-                    console.log(index % 2);
-
                     return { 
                         s_code_name : s_code_name, 
                         s_name : s_name, 
@@ -67,7 +78,7 @@ class teamSugiList extends Component {
         })
     }
     render() { 
-        const { sugiList } = this.state;
+        const { sugiList, countItem, moreMode } = this.state;
         return (  
             <div id = "container" style ={{paddingBottom:'0px !important'}}> 
                
@@ -77,7 +88,7 @@ class teamSugiList extends Component {
                         <div className="div_con3">
                             <div className="con">
                             {
-                                sugiList.map((item, index) => (
+                                sugiList.slice(0, countItem).map((item, index) => (
                                 <ul className="list_wrap" id="listPage" key={index}>
                                     <li id={item.seq} className={item.classType}>
                                         <div className="title_wrap">
@@ -93,11 +104,21 @@ class teamSugiList extends Component {
                             }       
                             </div>
                         </div>
+                        <div className="div_con3">
+                            <div className="con">
+                                <div className="more_btn" id="divMoreBtn">
+                                    { moreMode ? (
+                                        <span id="spanMoreTxt" onClick={this.showMore}><font>더보기</font></span>
+                                    ) : (
+                                        <span id="spanMoreTxt" ><font>맨위로</font></span>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         );
     }
 }
- 
 export default teamSugiList;
