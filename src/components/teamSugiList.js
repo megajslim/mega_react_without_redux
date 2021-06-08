@@ -1,37 +1,47 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, useState } from "react";
 import TeamSugiDataService from "../services/teamSugiService";
 import { isUndefined, isEqual } from 'lodash/lang'
 import {hasApiServiceError, urlPublicImage} from '../utils/helper'
 import { Switch, Route, Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
+import { unstable_renderSubtreeIntoContainer } from "react-dom";
 class teamSugiList extends Component {
     constructor(props) {
         super(props);
         this.showMore = this.showMore.bind(this);
+        this.goTop = this.goTop.bind(this);
         this.state = {  
             sugiList : [],
             countItem : 2,
-            moreMode : true
+            moreMode : true,
+            countInterVal : 2
         }
     }
+    
     componentDidMount(){
         this.renderList();
     }
 
     showMore() {
-        const {sugiList, countItem } = this.state
-        sugiList.length  === countItem ? (
-            this.setState({ 
-                moreMode : false
-            })
-        ) : (
-            this.setState({ 
-                countItem: countItem + 2
-            })
-        )
-      }
+        const {sugiList, countItem, countInterVal } = this.state
+         sugiList.length  === countItem + countInterVal ? (
+             this.setState({ 
+                moreMode : false,
+                countItem: countItem + countInterVal
+             })
+         ) : (
+             this.setState({ 
+                 countItem: countItem + countInterVal
+             })
+         )
+    }
+
+    goTop(){
+        window.scroll({ top: 0, behavior: 'smooth'})
+    }
 
     renderList = () => {
+        console.log("render")
         TeamSugiDataService.getAll()
         .then( response => {
             const responseJson = response.data
@@ -116,7 +126,6 @@ class teamSugiList extends Component {
                                 
                                 ))
                             }   
-                            
                             </div> 
                         </div>
                         <div className="div_con3">
@@ -125,7 +134,7 @@ class teamSugiList extends Component {
                                     { moreMode ? (
                                         <span id="spanMoreTxt" onClick={this.showMore}><font>더보기</font></span>
                                     ) : (
-                                        <span id="spanMoreTxt" ><font>맨위로</font></span>
+                                        <span id="spanMoreTxt" onClick={this.goTop}><font>맨위로</font></span>
                                     )}
                                 </div>
                             </div>
