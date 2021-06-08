@@ -2,7 +2,8 @@ import React, { Component, Fragment } from "react";
 import TeamSugiDataService from "../services/teamSugiService";
 import { isUndefined, isEqual } from 'lodash/lang'
 import {hasApiServiceError, urlPublicImage} from '../utils/helper'
-
+import { Switch, Route, Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 class teamSugiList extends Component {
     constructor(props) {
         super(props);
@@ -81,10 +82,19 @@ class teamSugiList extends Component {
         const { sugiList, countItem, moreMode } = this.state;
         return (  
             <div id = "container" style ={{paddingBottom:'0px !important'}}> 
-               
                 <div id="div_cont" >
                     <div id="div_full" className="div_con taL">
                     <div><img src = {urlPublicImage('2020_team','sugi_list_topn_2.jpg')} style={{width:'1000px'}}/></div>
+                    <div style={{width:'1000px', background:'#4d4d4d', height : '50px', margin:'auto'}}>
+                    <ul style= {{listStyleType:'none', padding:'0', margin:'0'}}>
+                        <li style={{display:'block', float: 'left', padding: '15px', color : '#ffffff'}}>
+                            Add
+                        </li>
+                        <li style={{display:'block', float: 'left',  padding: '15px', color : '#ffffff'}}>
+                            수기 리스트
+                        </li>
+                        </ul>
+                    </div>
                         <div className="div_con3">
                             <div className="con">
                             {
@@ -98,11 +108,16 @@ class teamSugiList extends Component {
                                         </div>
                                         <p className="title">{item.s_subject}</p>
                                         <p className="team_contents">{item.s_content}</p>
+                                        <Link to={"/teamsugi/" + item.s_seq}>
+                                            <Button variant="info">수정</Button>
+                                        </Link>
                                     </li>
                                 </ul>
+                                
                                 ))
-                            }       
-                            </div>
+                            }   
+                            
+                            </div> 
                         </div>
                         <div className="div_con3">
                             <div className="con">
