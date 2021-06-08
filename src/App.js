@@ -8,6 +8,7 @@ function App() {
   return (
     <Switch>
       <Route exact path='/' component={TeamSugiList} />
+      <Route exact path='/teamsugi' component={TeamSugiList} />
       <Route path="/teamsugi/:id" component={TeamSugi} />
     </Switch>
   );

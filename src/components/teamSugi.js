@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import TeamSugiDataService from "../services/teamSugiService";
-import {hasApiServiceError, urlPublicImage} from '../utils/helper'
+import {hasApiServiceError, urlPublicImage} from '../utils/helper';
+import TopMenu from './menu';
 
 class teamSugi extends Component {
     constructor(props) {
@@ -64,7 +65,7 @@ class teamSugi extends Component {
             <div id = "container" style ={{paddingBottom:'0px !important'}}> 
                 <div id="div_cont" >
                     <div id="div_full" className="div_con taL">
-                    <div><img src = {urlPublicImage('2020_team','sugi_list_topn_2.jpg')} style={{width:'1000px'}}/></div>
+                        <TopMenu></TopMenu>
                         <div className="div_con3">
                             <div className="con">
                             {currentTeamSugi ? (
