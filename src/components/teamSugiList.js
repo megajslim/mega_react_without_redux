@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import TeamSugiDataService from "../services/teamSugiService";
 import {hasApiServiceError} from '../utils/helper'
-import { Link } from "react-router-dom";
-import { Button } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
 import TopMenu from "./menu";
 
 class teamSugiList extends Component {
@@ -24,10 +23,11 @@ class teamSugiList extends Component {
 
     showMore() {
         const {sugiList, countItem, countInterVal } = this.state
-         sugiList.length  === countItem + countInterVal ? (
+         sugiList.length  <= countItem + countInterVal ? (
              this.setState({ 
                 moreMode : false,
                 countItem: countItem + countInterVal
+                
              })
          ) : (
              this.setState({ 
@@ -41,7 +41,6 @@ class teamSugiList extends Component {
     }
 
     renderList = () => {
-        console.log("render")
         TeamSugiDataService.getAll()
         .then( response => {
             const responseJson = response.data
@@ -108,9 +107,7 @@ class teamSugiList extends Component {
                                         </div>
                                         <p className="title">{item.s_subject}</p>
                                         <p className="team_contents">{item.s_content}</p>
-                                        <Link to={"/teamsugi/" + item.s_seq}>
-                                            <Button variant="info">수정</Button>
-                                        </Link>
+                                        <Button variant="contained" color="primary" href={"/teamsugi/" + item.s_seq}>수정 </Button>
                                     </li>
                                 </ul>
                                 ))

@@ -8,5 +8,13 @@ class TeamSugiDataService {
     get(id) {
         return http.get(`/TeamSugi/${id}`);
     }
+
+    update(data) {
+        return http.put(`/TeamSugi/Update`, data);
+    }
+
+    delete(id){
+        return http.delete(`/TeamSugi/${id}`);
+    }
 }
 export default new TeamSugiDataService();

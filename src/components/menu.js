@@ -9,9 +9,9 @@ class TopMenu extends Component {
             <div><img src = {urlPublicImage('2020_team','sugi_list_topn_2.jpg')} style={{width:'1000px'}}/></div>
             <div style={{width:'1000px', background:'#4d4d4d', height : '50px', margin:'auto'}}>
                 <ul style= {{listStyleType:'none', padding:'0', margin:'0'}}>
-                    <li style={{display:'block', float: 'left', padding: '15px', color : '#ffffff'}}>
+                    {/* <li style={{display:'block', float: 'left', padding: '15px', color : '#ffffff'}}>
                         Add
-                    </li>
+                    </li> */}
                     <Link to={"/teamsugi"}>
                         <li style={{display:'block', float: 'left',  padding: '15px', color : '#ffffff'}}>
                             List
