@@ -16,5 +16,10 @@ class TeamSugiDataService {
     delete(id){
         return http.delete(`/TeamSugi/${id}`);
     }
+
+    create(data) {
+        return http.post("/TeamSugi/Create", data);
+    }
+    
 }
 export default new TeamSugiDataService();
