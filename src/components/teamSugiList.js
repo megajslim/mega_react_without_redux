@@ -3,6 +3,7 @@ import TeamSugiDataService from "../services/teamSugiService";
 import {hasApiServiceError} from '../utils/helper'
 import Button from '@material-ui/core/Button';
 import TopMenu from "./menu";
+import BottomMore from "./bottomMore";
 
 class teamSugiList extends Component {
     constructor(props) {
@@ -27,7 +28,6 @@ class teamSugiList extends Component {
              this.setState({ 
                 moreMode : false,
                 countItem: countItem + countInterVal
-                
              })
          ) : (
              this.setState({ 
@@ -114,17 +114,11 @@ class teamSugiList extends Component {
                             }   
                             </div> 
                         </div>
-                        <div className="div_con3">
-                            <div className="con">
-                                <div className="more_btn" id="divMoreBtn">
-                                    { moreMode ? (
-                                        <span id="spanMoreTxt" onClick={this.showMore}><font>더보기</font></span>
-                                    ) : (
-                                        <span id="spanMoreTxt" onClick={this.goTop}><font>맨위로</font></span>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
+                        <BottomMore 
+                            showMore = {this.showMore} 
+                            goTop = {this.goTop}
+                            moreMode = {moreMode}>
+                        </BottomMore>
                     </div>
                 </div>
             </div>

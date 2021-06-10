@@ -10,14 +10,10 @@ class TopMenu extends Component {
             <div style={{width:'1000px', background:'#4d4d4d', height : '50px', margin:'auto'}}>
                 <ul style= {{listStyleType:'none', padding:'0', margin:'0'}}>
                     <Link to={"/add"}>
-                    <li style={{display:'block', float: 'left', padding: '15px', color : '#ffffff'}}>
-                        Add
-                    </li> 
+                        <li style={{display:'block', float: 'left', padding: '15px', color : '#ffffff'}}>Add</li> 
                     </Link>
                     <Link to={"/teamsugi"}>
-                        <li style={{display:'block', float: 'left',  padding: '15px', color : '#ffffff'}}>
-                            List
-                        </li>
+                        <li style={{display:'block', float: 'left',  padding: '15px', color : '#ffffff'}}> List</li>
                     </Link>
                 </ul>
             </div>
@@ -25,5 +21,4 @@ class TopMenu extends Component {
          );
     }
 }
-    
 export default TopMenu;

@@ -104,7 +104,7 @@ class teamSugiAdd  extends Component {
                                             variant="contained"
                                             color="primary"
                                             onClick={saveTeamSugi}
-                                        >
+                                    >
                                             Save
                                     </Button>
                                 </Card>
